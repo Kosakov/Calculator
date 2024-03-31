@@ -59,9 +59,9 @@ function calculate(firstNumber,secondNumber,operator){
 
 
 
-function checkResultLength(result){
+function checkContentLength(content){
     
-    if (String(result).length>=9){
+    if (String(content).length>=9){
         display.style.fontSize="1.3em"
     }
 }
