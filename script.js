@@ -36,7 +36,7 @@ function log(e){
         console.log(firstNum)
         console.log(secondNum)
         let result=calculate(firstNum,secondNum,operator)
-        checkResultLength(result)
+        checkContentLength(result)
         display.textContent=calculate(firstNum,secondNum,operator)
     }
 
