@@ -36,7 +36,7 @@ html{
 
 .display p{
     height: 1.5em;
-    font-size: 2.88em;
+    font-size: 2.3em;
     text-align:right;
 }
 
@@ -74,12 +74,15 @@ html{
     margin-left: 1em;
     margin-top: 0.4em;
     margin-bottom: 0.4em;
-    background-color: coral;
+    background-color: #fcab10;
     box-shadow: 1px -3px 8px 2px;
+}
+.basicOperators .button , .equal, .percent, .clear{
+    background-color: #44af69;
 }
 
 .button:hover{
-    background-color: #ef233c;
+    background-color: #f8333c;
     cursor: pointer;
 
 }
