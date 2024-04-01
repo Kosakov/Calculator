@@ -88,6 +88,9 @@ html{
 }
 
 .zero{
-    flex: 0 1 50%
+    flex: 0 1 40%
 }
 
+.doubleZero{
+    flex: 0 1 40%
+}
