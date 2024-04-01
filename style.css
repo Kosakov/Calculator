@@ -1,13 +1,12 @@
-.michroma-regular {
-    font-family: "Michroma", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
+@font-face {
+    font-family: Michroma-Regular;
+    src: url('/fonts/Michroma-Regular.ttf');
+}
   
 *{
     margin: 0;
     padding: 0;
-    font-family: "Michroma",sans-serif;
+    font-family: "Michroma-Regular",sans-serif;
     font-weight: bold;
 }
 
