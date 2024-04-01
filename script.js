@@ -5,14 +5,7 @@ let firstNum = ""
 let secondNum = ""
 let operator = ""
 let hasResult = false
-let floatingCounts = 0
 
-console.log(buttons)
-
-if (checkfloatingPointsCount(display.textContent) >0){
-    console.log(checkfloatingPointsCount(display.textContent))
-    floatingPointBtn.removeEventListener("click", log)
-}
 
 buttons.forEach(button => button.addEventListener("click", log))
 
@@ -27,7 +20,7 @@ function log(e) {
         floatingPointBtn.removeEventListener("click", log)
     }
 
-    console.log(button)
+    //console.log(button)
     if (button == "AC") {
         display.textContent = ""
         hasResult = false
@@ -36,12 +29,10 @@ function log(e) {
         operator = ""
     }
 
-    if (display.textContent.length > 10 || hasResult) {
-        return
-    }
-
-    if (button == 0 || button == 1 || button == 2 || button == 3 || button == 4 || button == 5 || button == 6 || button == 7 || button == 8 || button == 9 || button == ".") {
-
+    if (button == 0 || button == 2 || button == 2 || button == 3 || button == 4 || button == 5 || button == 6 || button == 7 || button == 8 || button == 9 || button == ".") {
+        if (display.textContent.length > 10 || hasResult) {
+            return
+        }
         display.textContent = display.textContent + button
     }
 
@@ -54,11 +45,19 @@ function log(e) {
     }
 
     if (button == "=") {
-        let result = calculate(firstNum, secondNum, operator)
         secondNum = display.textContent
+        let result = calculate(firstNum, secondNum, operator)
         checkContentLength(result)
-        display.textContent = calculate(firstNum, secondNum, operator)
+        console.log(result)
+        if(result){
+            display.textContent=result
+        }
+        else{
+            display.textContent = "Inalid Operation"
+        }
+        
         hasResult = true
+        floatingPointBtn.addEventListener("click", log)
     }
 
 }
@@ -91,8 +90,8 @@ function checkContentLength(content) {
     if (String(content).length > 10 && String(content).length < 20) {
         display.style.fontSize = "1.5em"
     }
-    else if (String(content).lengt >= 20) {
-        display.style.fontSize = "1.5em"
+    else if (String(content).length >= 20) {
+        display.style.fontSize = "1em"
     }
     else {
         display.style.fontSize = "2em"
