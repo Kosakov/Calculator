@@ -1,17 +1,18 @@
 @font-face {
     font-family: 'Michroma-Regular';
-    src: url('/fonts/Michroma-Regular.woff') format('woff2'),
-         url('/fonts/Michroma-Regular.woff') format('woff');
+    src: url('fonts/Michroma-Regular.woff2') format('woff2'),
+         url('fonts/Michroma-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
+
 }
 
 *{
     margin: 0;
     padding: 0;
-    font-family: "Michroma-Regular",sans-serif;
-    font-weight: bold;
+    font-family: 'Michroma-Regular';
+    font-weight: normal;
+    font-style: normal;
 }
 
 html{
