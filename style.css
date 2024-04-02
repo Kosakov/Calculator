@@ -10,9 +10,8 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Michroma-Regular';
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'Michroma-Regular',sans-serif;
+    font-weight: bold;
 }
 
 html{
@@ -20,11 +19,17 @@ html{
     height: 100%vw;
     background-color: #003049;
 }
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .calculator{
     width: 400px;
     height: 550px;
     background-color: lightblue;
-    margin:7em 45em;
+    margin-top:7em ;
     display:flex;
     flex-direction: column;
     border:6px solid #219ebc;
@@ -101,4 +106,23 @@ html{
 
 .doubleZero{
     flex: 0 1 40%
+}
+
+
+@media screen and (max-width: 668px){
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .calculator{
+        width: 355px;
+        height: 500px;
+    }
+
+    .button{
+        width: 3.2em;
+        height: 3.2em;
+        flex-shrink: 1;
+    }
 }
